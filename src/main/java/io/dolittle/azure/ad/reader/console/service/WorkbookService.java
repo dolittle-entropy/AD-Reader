@@ -164,7 +164,7 @@ public class WorkbookService {
         row.createCell(++columnCounter).setCellValue(user.getId());
         row.createCell(++columnCounter).setCellValue(user.getDisplayName());
         row.createCell(++columnCounter).setCellValue(user.getUserType());
-        row.createCell(++columnCounter).setCellValue(user.getEmail());
+        row.createCell(++columnCounter).setCellValue(user.getMail());
         return rowCounter;
     }
 

@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper=true)
 public class AdUser extends BaseData {
-    private String email;
+    private String mail;
     private String userType;
 
 
