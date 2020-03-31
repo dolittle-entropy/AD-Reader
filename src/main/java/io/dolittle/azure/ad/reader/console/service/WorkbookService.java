@@ -10,6 +10,7 @@ import io.dolittle.azure.ad.reader.console.model.user.Group;
 import io.dolittle.azure.ad.reader.console.model.user.Roles;
 import io.dolittle.azure.ad.reader.console.model.user.AdUser;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -48,6 +49,7 @@ public class WorkbookService {
         row.createCell(++columnCounter).setCellValue("ID");
         row.createCell(++columnCounter).setCellValue("DisplayName");
         row.createCell(++columnCounter).setCellValue("Description");
+        row.createCell(++columnCounter).setCellValue("GroupTypes");
 
         for (AdGroup adGroup : groupList) {
             //Group data
@@ -72,6 +74,7 @@ public class WorkbookService {
         row.createCell(++columnCounter).setCellValue(adGroup.getId());
         row.createCell(++columnCounter).setCellValue(adGroup.getDisplayName());
         row.createCell(++columnCounter).setCellValue(adGroup.getDescription());
+        row.createCell(++columnCounter).setCellValue(adGroup.getGroupTypes().toString());
 
         return rowCounter;
     }

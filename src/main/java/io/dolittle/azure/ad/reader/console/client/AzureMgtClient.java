@@ -3,7 +3,6 @@
 
 package io.dolittle.azure.ad.reader.console.client;
 
-import io.dolittle.azure.ad.reader.console.model.roleassignment.RoleAssignment;
 import io.dolittle.azure.ad.reader.console.model.roleassignment.RoleAssignmentList;
 import io.dolittle.azure.ad.reader.console.model.roledefinition.RoleDefinition;
 import io.dolittle.azure.ad.reader.console.service.AuthenticationService;
@@ -19,7 +18,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
-import java.util.List;
 
 @Component
 @Slf4j

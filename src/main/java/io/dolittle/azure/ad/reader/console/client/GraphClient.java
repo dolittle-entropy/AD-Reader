@@ -58,7 +58,8 @@ public class GraphClient {
 
     public IGroupCollectionPage getAllGroups() {
         initGraphClient();
-        return graphClient.groups().buildRequest().get();
+        Option orderBy = new QueryOption("$orderby", "displayName");
+        return graphClient.groups().buildRequest(Arrays.asList(orderBy)).get();
     }
 
     public IDirectoryObjectCollectionWithReferencesPage getGroupMembers(String groupId) {

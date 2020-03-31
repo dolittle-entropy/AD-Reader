@@ -84,6 +84,7 @@ public class AuthenticationService {
         if (result != null) {
             log.info("Got a token:");
             try {
+                tokenCache.put(tokenSource, result.accessToken());
                 storeToken(result.accessToken(), tokenSource);
             } catch (IOException e) {
                 log.error("Unable to store token", e);
@@ -120,7 +121,6 @@ public class AuthenticationService {
         FileUtils.writeByteArrayToFile(targetFile, buffer);
 
         reader.close();
-        tokenCache.put(tokenSource, token);
     }
 
     private String check4Token(TokenSource tokenSource) {

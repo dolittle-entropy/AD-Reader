@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>io.dolittle.azure.ad</groupId>
 	<artifactId>reader</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>reader</name>
 	<description>Project to read data from AD and populate a file</description>
 

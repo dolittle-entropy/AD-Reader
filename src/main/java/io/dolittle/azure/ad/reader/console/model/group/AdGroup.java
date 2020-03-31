@@ -15,6 +15,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper=true)
 public class AdGroup extends BaseData {
 
+    private List<String> groupTypes = new ArrayList<>();
     private List<User> users = new ArrayList<>();
     private List<RoleAssignment> roleAssignments = new ArrayList<>();
 }
